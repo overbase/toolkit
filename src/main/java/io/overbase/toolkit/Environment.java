@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 
 class Environment {
 
-    private static final String MY_CONFIG = ".my.cnf";
+    public static final String MY_CONFIG = ".my.cnf";
 
     private static String currentDir;
 
