@@ -1,5 +1,8 @@
 package io.overbase.toolkit;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 class Environment {
 
     private static final String MY_CONFIG = ".my.cnf";
@@ -8,12 +11,12 @@ class Environment {
 
     private static String userHomeDir;
 
-    private static String myConfigPath;
+    private static Path myConfigPath;
 
     public static void init() {
         currentDir = System.getProperty("user.dir");
         userHomeDir = System.getProperty("user.home");
-        myConfigPath = userHomeDir + "/" + MY_CONFIG;
+        myConfigPath = Paths.get(userHomeDir + "/" + MY_CONFIG);
     }
 
     public static String getCurrentDir() {
@@ -24,7 +27,7 @@ class Environment {
         return userHomeDir;
     }
 
-    public static String getMyConfigPath() {
+    public static Path getMyConfigPath() {
         return myConfigPath;
     }
 }

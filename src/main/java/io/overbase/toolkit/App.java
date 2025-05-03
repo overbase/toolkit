@@ -17,5 +17,6 @@ public class App
         System.out.println("Current working directory: " + Environment.getCurrentDir());
         System.out.println("User home directory: " + Environment.getUserHomeDir());
         System.out.println("My config path: " + Environment.getMyConfigPath());
+        System.out.println("My config exists: " + Environment.getMyConfigPath().toFile().exists());
     }
 }
