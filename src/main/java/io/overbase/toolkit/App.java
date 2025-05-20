@@ -18,5 +18,6 @@ public class App
         System.out.println("User home directory: " + Environment.getUserHomeDir());
         System.out.println("My config path: " + Environment.getMyConfigPath());
         System.out.println("My config exists: " + Environment.getMyConfigPath().toFile().exists());
+        System.out.println("My config host: " + Environment.getMyConfig().getValue("client", "host"));
     }
 }

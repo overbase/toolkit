@@ -13,6 +13,6 @@ public class EnvironmentTest {
         assertEquals(System.getProperty("user.dir"), Environment.getCurrentDir());
         String userHome = System.getProperty("user.home");
         assertEquals(userHome, Environment.getUserHomeDir());
-        assertEquals(Paths.get(userHome + "/" + Environment.MY_CONFIG), Environment.getMyConfigPath());
+        assertEquals(Paths.get(userHome + "/" + Environment.MY_CONFIG_NAME), Environment.getMyConfigPath());
     }
 }
